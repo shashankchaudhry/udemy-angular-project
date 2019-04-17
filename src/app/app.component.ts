@@ -6,4 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  navActive: string;
+
+  modifyNav(activeNav: string) {
+    this.navActive = activeNav;
+  }
 }
