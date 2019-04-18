@@ -22,13 +22,13 @@
     </div>
   </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="recipe">
   <div class="col-xs-12">
-    Description
+    {{ recipe.description }}
   </div>
 </div>
-<div class="row">
+<div class="row" *ngIf="recipe">
   <div class="col-xs-12">
-    Ingredients
+    {{ recipe.imagePath }}
   </div>
 </div>
