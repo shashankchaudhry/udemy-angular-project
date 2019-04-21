@@ -31,7 +31,6 @@ export class ShoppingListService {
     deleteIngredient(name: string, qty: number) {
         let index = -1;
         for (let i = 0; i < this.ingredients.length; i++) {
-            console.log(this.ingredients[i]);
             if (name == this.ingredients[i].name && qty == this.ingredients[i].amount) {
                 index = i;
                 break;
@@ -40,8 +39,6 @@ export class ShoppingListService {
         if (index > -1) {
             this.ingredients.splice(index, 1);
             this.newIngredients.emit();
-        } else {
-            console.log("nada");
         }
     }
 
