@@ -1,10 +1,24 @@
 import { Recipe } from './recipe.model';
 import { EventEmitter } from '@angular/core';
+import { Ingredient } from '../shared/ingredient.model';
 
 export class RecipeService {
     private recipes: Recipe[] = [
-        new Recipe('Test Recipe 1', 'This is test recipe 1.', '/assets/img/Recipe.jpg'),
-        new Recipe('Test Recipe 2', 'This is test recipe 2.', '/assets/img/Recipe.jpg')
+        new Recipe('Pizza', 
+        'This is a pizza recipe.',
+        '/assets/img/Recipe.jpg',
+        [
+            new Ingredient("Tomato Sauce", 2),
+            new Ingredient("Cheese", 1),
+        ]),
+        new Recipe('Burger', 
+        'Delicious burger.',
+        '/assets/img/Recipe.jpg',
+        [
+            new Ingredient("Burger Buns", 2),
+            new Ingredient("Cheese", 1),
+            new Ingredient("Beef Patty", 1),
+        ]),
     ]
 
     private selectedRecipe: Recipe;
