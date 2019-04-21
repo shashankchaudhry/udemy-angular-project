@@ -4,11 +4,11 @@
     </div>
 </div>
 <hr>
-<div class="row" *ngFor="let recipe of recipes">
+<div class="row" *ngFor="let recipe of recipes; let i = index">
     <div class="col-xs-12">
         <app-recipe-item 
         [recipe]="recipe" 
-        (emitRecipe)="onRecipeEmit($event)"
+        [index]="i"
         ></app-recipe-item>
     </div>
 </div>
