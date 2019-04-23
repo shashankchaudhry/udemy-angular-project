@@ -21,15 +21,11 @@ export class RecipeService {
         ]),
     ]
 
-    private selectedRecipe: Recipe;
-    recipeEmitter = new EventEmitter<Recipe>();
+    getRecipe(index: number) {
+        return this.recipes.slice()[index];
+    }
 
     getRecipes(): Recipe[] {
         return this.recipes.slice();
-    }
-
-    setSelectedRecipe(index: number) {
-        this.selectedRecipe = this.recipes[index];
-        this.recipeEmitter.emit(this.selectedRecipe);
     }
 }

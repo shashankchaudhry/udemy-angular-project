@@ -9,7 +9,6 @@ export class DropdownDirective {
   constructor(private elRef: ElementRef, private renderer: Renderer2) { }
 
   @HostListener('click') mouseClick() {
-    console.log('clicked');
     this.showDropdown = !this.showDropdown;
     if (this.showDropdown) {
       this.renderer.addClass(this.elRef.nativeElement, 'open');
