@@ -7,7 +7,7 @@
       style="cursor: pointer;"
       *ngFor="let si of ingredients; let i = index"
       (click)="selectIngredient(i)"
-      [ngClass]="(editMode && i === selectedIndex) ? 'selected' : ''">
+      [ngClass]="(editMode && i === selectedIndex) ? 'list-group-item-success' : ''">
       {{ si.ingredient.name }} ({{ si.ingredient.amount }})
     </a>
     </ul>
